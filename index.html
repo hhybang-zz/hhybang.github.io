@@ -68,12 +68,72 @@
       </div>
     </header>
 
-    <section id = "hw">
+    <section id = "assignment0">
       <div class = "container">
         <img src="img/ps0_screenshot.png" alt="Screenshot" width = "100%">
         <a href = "file:///Users/helenbang/Desktop/6S198/ps0/index.html">
         modified TinyCodeExample</a>
       </div>
+    </section>
+
+    <section id = "assignemnt1">
+      <div class = "container" id = "section4">
+        Please note that the value for confidence and numCount were swapped for this section.
+        I correctly fixed the text accordingly onwards.
+        <img src = "img/assignment1/sec4img1.png" width = "100%">
+        Since I had three classes with one image of myself from distance, and another very close shot, 
+        when I placed my face in front of the camera at a distance in between, the confidence and top K
+        values were mixed between the first class and the third, which was expected.
+        <img src = "img/assignment1/sec4img2.png" width = "100%">
+        <img src = "img/assignment1/sec4img3.png" width = "100%">
+        The images above show how the two values (confidence and the top K values) change according to
+        the distance of my face from the camera. They were pretty accurate. 
+        <img src = "img/assignment1/sec4img4.png" width = "100%">
+        This screenshot shows when the two people are both in the camera that were classified as two different
+        classes. The notified values show an accurate representation of the ratio of one person to another's 
+        presence in the photo. 
+        <img src = "img/assignment1/sec4img5.png" width = "100%">
+        <img src = "img/assignment1/sec4img6.png" width = "100%">
+        These two photos show how it correctly classifies the person from the second class when she is at an 
+        expected distance, but when she puts her face very close to the camera, which is what the first person 
+        did to classify for class 3, the system classifed the image as class 3 (the class of a different person with 
+        her face very close to the camera).
+      </div>
+      <div class = "container" id = "section5">
+        <img src = "img/assignment1/sec4img1.png" width = "100%">
+        This is the code that was modified. We decided to get the maximum top K value from the 3 that were classified,
+        and then neglect the others if they are less than half the value of the maximum top K value. Then, we calculated
+        the probability accordingly. This allowed for a better representation of what class was the most accurate, cnaceling
+        the possible noise. 
+        <img src = "img/assignment1/sec5img5.png" width = "100%">
+        This image shows a bit of a fault with this modification because since the image is more dominantly classified
+        as the second class, the confidence level is 1 for the second class, with the other two neglected. However,
+        the person from the different class was in the image, and the provided confidence level neglects this. 
+        It treated the value as noise, but would have been a valuable information. 
+      </div>
+      <div class = "container" id = "section6">
+        <img src = "img/assignment1/sec6img1.png" width = "100%">
+        As expected, when the number of samples were too little, such as 10, the classification was very inaccurate 
+        when the previous tries in the eariler sections confused the system. A bit of a surprise was that too many samples
+        didn't perfectly mean more accurate classification, because when the classifying person (not a still image) kept
+        moving, the classifcation was harder with more varying samples. Still images were easy to classify with much less
+        samples and keeping the number count made it simple, but otherwise, it was necessary to find out what the 
+        best number of samples would be for classification. 
+      </div>
+      <div class = "container" id = "section7">
+        <img src = "img/assignment1/sec7img1.png" width = "100%">
+        <img src = "img/assignment1/sec7img2.png" width = "100%">
+        Using the starter questions, we decided to play with having one less class and one more class.
+        The results were interesting since the system had either one less class to compare the shown image to or one more 
+        class to compare the image to. When the number of classes decreased, the confidence and the top K values were less
+        divided, making the confidence level higher for each class when the system classified the image from one to another. 
+        In contrast, when having more classes, the confidence level was divided among the classes, making the confidence value
+        more spread out among the classes. As mentioned before in the previous sections, this again delt with how to classify
+        some value as either noise or value information to return to the user. By experimenting with the number of classes, I think that
+        having more classes and neglecting the top K values when it is significantly less than the maximum of the classes would balance
+        out the values and help define the borderline of treating some values as noise or important. 
+      </div>
+      I worked on this assignment with my partner, Ashley Lee. 
     </section>
 
     <!-- Services -->
