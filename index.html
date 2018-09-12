@@ -146,6 +146,42 @@
       <h1>Assignment 2</h1>
       <div class = "container" id = "section1">
         <h3>section 1</h3>
+        The model was invalid because the input image is 28 x 28 pixels, which was set as the input for the Softmax layer, 
+        which takes 10 values (one for each digit) as input. So in order for this model to be valid, the inputs and outputs have
+        to match between each layer, which is why we need two layers that first make the input from the image into a 1D vector, and then
+        into 10 values for the Softmax layer. <br/>
+        <h4>problem 1</h4>
+        The reason why the classifications are almost always wrong is because the weights are set to random values and the values will 
+        change as the network is trained. Currently, the network is not trained, so the classifications are incorrect. 
+        I expect this particular network to be wrong with high probability. This is what is shown as results with the numbers very rarely 
+        being classified as the actual value. The highest percentage I can see being correctly classified was an accuracy of around 40%.
+      </div>
+      <div class = "container" id = "section2">
+        <h3>section 2: problem 2</h3>
+        1. I observe all accuracies, but after training, the classification is significantly better, with a lot of the images being classified as
+        the correct number with much higher probability of around 70-100%. However, there are still some errors where a number 8 was classfied 
+        correctly with an accuracy of 20% and 60% as the number 0. The demo performs around 630 inferences / second. It trained 1980 examples per second. 
+        <br/>
+        Then with the Fashion MNIST, I observe similar pattern with the numbers, but when the difference is when the classification is correct, it is 
+        mostly with a very high probability like 90-99%, but when it is incorrect, the accuracy was as low as 10%. The classification was harder when 
+        the image was very similar to a different category such as a shirt vs. a pullover. The demo performed around 610 inferences / second. It trained 1980 examples per second.
+        <br/>
+        2. Even after training for a minute and half (total of 37824 examples), the accuracy is overall very low with plenty with no correct classification
+        listed with probabilities (so, correction of 0 percent). Mostly the accuracy lies around an average of 30%, with plenty 0%.
+        <br/>
+        3-4. After adding a new layer, I observe that the accuracy plummets to zero and some with accuracy of 100%. The result is that it either 
+        perfectly correctly or incorrectly classifies the images.
+        ??????????????
+      </div>
+      <div class = "container" id = "section4">
+        <h3>section 4: problem 3</h3>
+        <h4>(section 3 didn't have any writeups)</h4>
+        Adding the ReLu layer didn't help with the classification (worsened it). Every classification remained around 10%, and there were a lot of
+         inferences that were completely wrong with the classifications. Interestingly all classifications remained at 10% consistently.
+         Increasing the number of units of the first FC model to 100 definitely made the classfications a lot better. The accuracies varied with many 
+         being correctlyl classified. However, there are plenty of incorrectly classified images with accuracy of less than 10%. It seems like the first
+         trial with only the flatten and the FC layer with 10 units gave the best results for the number images. The last trial with ReLu and the 100 units FC layer
+         and the first trial (flatten and FC layer) gave the best classifications so far. 
       </div>
     </section>
 
