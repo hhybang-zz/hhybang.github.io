@@ -170,8 +170,10 @@
         listed with probabilities (so, correction of 0 percent). Mostly the accuracy lies around an average of 30%, with plenty 0%.
         <br/>
         3-4. After adding a new layer, I observe that the accuracy plummets to zero and some with accuracy of 100%. The result is that it either 
-        perfectly correctly or incorrectly classifies the images.
-        ??????????????
+        perfectly correctly or incorrectly classifies the images. The reason why the final result was NaN% is because adding another FC layer means that
+        another layer of linear multiplication is done on the input values. This would mean that there are a total of two linear multiplication layers 
+        which lead to a gradient overflow, thus making the resulting value explode. The value increases dramatically to inifinity, leading the final
+        value to a NaN%.
       </div>
       <div class = "container" id = "section4">
         <h3>section 4: problem 3</h3>
