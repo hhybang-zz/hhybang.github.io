@@ -185,6 +185,37 @@
          trial with only the flatten and the FC layer with 10 units gave the best results for the number images. The last trial with ReLu and the 100 units FC layer
          and the first trial (flatten and FC layer) gave the best classifications so far. 
       </div>
+      <div class = "container" id = "section6">
+        <h3>section 6: problem 4</h3>
+        <img src = "img/assignment2/1FClayer.png" width = 100%>
+        <img src = "img/assignment2/2FClayer.png" width = 100%>
+        <img src = "img/assignment2/3FClayer.png" width = 100%>
+        <img src = "img/assignment2/4FClayer.png" width = 100%>
+        <img src = "img/assignment2/5FClayer.png" width = 100%>
+        Above are the screenshots of the model's result with 1,2,3,4, and 5 FC layers (in this order)
+        The training time increases as the number of layers increase. I observed that it is the best when
+        using 3 FC layers. Making the second wide and first narrow performed better than vice versa. This is probably because 
+        making the first layer narrow gets the data loss. Yes I see similar results. 
+      </div>
+      <div class = "container" id = "problem5">
+        <h3>problem 5</h3>
+        As the BATCH_SIZE went down, the loss value was less stable. The bigger the BATCH_SIZE, the more stable
+        the values of loss were. Also, with the value of NUM_BATCHES, when this value increased, the final loss 
+        value decreased as this number increased. 
+      </div>
+      <div class = "container" id = "problem6">
+        <h3>problem 6</h3>
+        1. I see that even when the classifications are correct, they are with a very low probability of around 
+        10%. When the classification is determined to be incorrect, the probability values are not too far from 
+        the correct classification values. 
+        2. As expected, when the NUM_BATCHES increased, the overall accuracy of the classifications were better than before. 
+        When the BATCH_SIZE increased to 100, the probabilities of the correctly classified images went up to 70%, 
+        which was not a probability we could see before.
+      </div>
+      <div class = "container" id = "problem7">
+        <h3>problem 7</h3>
+        <a href ="text/assignment2-7">Click here for the .txt file.</a>
+      </div>
     </section>
 
     
