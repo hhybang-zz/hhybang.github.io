@@ -224,6 +224,92 @@
       </div>
     </section>
 
+    <section id = "assignment3">
+      <h1>Assignment 3</h1>
+      <div class = "container" id = "problem1">
+        <h3>problem 1</h3>
+        After playing with the demo, I found that there are certain characteristics
+        that the model looks for when classifying the number. 
+        <img src = "img/assignment3/one.jpg" width = "100%">
+        Looking at this image, we see that the number drawn is hard to tell, but could
+        be easily classified as a 2. However, when I didn't draw the curves on the 
+        corners of the numbers, the model classified the drawing as a 1. 
+        Like this, we see that if the drawing keeps certain core characteristics of the number,
+        the classification follows them. 
+      </div>
+
+      <div class = "container" id = "problem2">
+        <h3>problem 2</h3>
+        1. The lines on the styled image got thicker as the same style was applied to the image 
+        numerous times. I took the styled image, fed it into the model, and styled it again. 
+        There weren't drastic changes, but I could see the lines thickening like the example below.
+        <img src = "img/assignment3/two.jpg" width = "100%"> 
+
+        2. The results were similar to what I had expected. The images had a bit of a different color scheme, 
+        but that was expected since the image I was feeding in had a different color range.
+        The results are shown below. 
+        <img src = "img/assignment3/three.jpg" width = "100%">
+        <img src = "img/assignment3/four.jpg" width = "100%">
+
+        3. After feeding in a few different images and filters, I realized that when two different
+        filters were applied, a lot of the details of the image were gone since a lot of the filters
+        average out the image to apply the filter. The below examples show the differences of 
+        applying a filter on top of an already filtered image vs. applying the filter directly on the
+        original image.
+        <img src = "img/assignment3/five.jpg" width = "100%">
+        <img src = "img/assignment3/six.jpg" width = "100%">
+        <img src = "img/assignment3/seven.jpg" width = "100%">
+
+      </div>
+
+      <div class = "container" id = "problem3">
+        <h3>problem 3</h3>
+        3. MNIST is much simpler problem than CIFAR-10. Fashion MNIST has similar training times 
+        since it is still a type of the MNIST. After searching online for possible reasons why,
+        it seems like it would take hours to have a better accuracy with the CIFAR-10. 
+
+        4. Like the problem mentions, there is a point at which adding more layers plateaus or 
+        even decreases the maximum accuracy you are able to achieve with that model. Adding more
+        convolutional layers will relate to the accuracy and the training speed to a certain level,
+        but after the certain point is reached it wouldn't effect them anymore. 
+
+        
+      </div>
+    </section>
+
+
+    <section id = "assignment6">
+      <h1>Assignment 6</h1>
+      <div class = "container" id = "problem1">
+        <h3>problem 1</h3>
+        The agent is rewarded for finding a walkable path to a goal tile with "G". 
+        According to the website, trying the 42 different methods still didn't lead the program to end on the goal tile.
+        I also tried numerous times, but I also wasn't able to get to the goal tile. 
+      </div>
+      <div class = "container" id = "problem2">
+        <h3>problem 2</h3>
+        The size of the table used for the Q-learning is the space of the environment's
+        observation (n) x space of the environment's action (m). [nxm]
+      </div>
+      <div class = "container" id = "problem3">
+        <h3>problem 3</h3>
+        The rewards didn't particularly improve over time in the later terms. The results were still pretty
+        inconsistent. However, when we see the very early results, we see that there were
+        a lot of results of 0 before the 1.0 reward came in. This shows that there was some improvement
+        in the beginning. I guess that it is the learning factor and the discount factor that caused these results.
+        The given values for both were pretty big, leading to this results. 
+      </div>
+      <div class = "container" id = "problem4">
+        <h3>problem 4</h3>
+        When I decreased the learning rate to 0.2, the rewards were definitely worse with 
+        less frequent values of 1.0 happening in comparison to the earlier result with the 
+        learning rate of 0.8.
+        Then, when I decreased the discount factor to 0.1 with a low learning rate, the result 
+        was significantly worsened with very rare results of 1.0 happening in comparison to the 
+        earlier results. 
+      </div>
+    </section>
+
     
 
     <!-- Footer -->
